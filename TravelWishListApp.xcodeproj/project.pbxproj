@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31E130DB225C64B2009657D8 /* GeoCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E130DA225C64B2009657D8 /* GeoCoder.swift */; };
 		31ED836E225BF9A7008F2399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED836D225BF9A7008F2399 /* AppDelegate.swift */; };
-		31ED8370225BF9A7008F2399 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED836F225BF9A7008F2399 /* FirstViewController.swift */; };
-		31ED8372225BF9A7008F2399 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED8371225BF9A7008F2399 /* SecondViewController.swift */; };
 		31ED8375225BF9A7008F2399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ED8373225BF9A7008F2399 /* Main.storyboard */; };
 		31ED8377225BF9A7008F2399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31ED8376225BF9A7008F2399 /* Assets.xcassets */; };
 		31ED837A225BF9A7008F2399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ED8378225BF9A7008F2399 /* LaunchScreen.storyboard */; };
 		31ED8385225BF9A7008F2399 /* TravelWishListAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED8384225BF9A7008F2399 /* TravelWishListAppTests.swift */; };
 		31ED8390225BF9A7008F2399 /* TravelWishListAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED838F225BF9A7008F2399 /* TravelWishListAppUITests.swift */; };
+		31ED839F225BFA6D008F2399 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ED839E225BFA6D008F2399 /* MapKit.framework */; };
+		31ED83A3225BFEFE008F2399 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED83A2225BFEFE008F2399 /* MapViewController.swift */; };
+		31ED83A5225C04C9008F2399 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED83A4225C04C9008F2399 /* TableViewController.swift */; };
+		31ED83A7225C2CFB008F2399 /* PlaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED83A6225C2CFB008F2399 /* PlaceList.swift */; };
+		31ED83A9225C2D43008F2399 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED83A8225C2D43008F2399 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31E130DA225C64B2009657D8 /* GeoCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoder.swift; sourceTree = "<group>"; };
 		31ED836A225BF9A7008F2399 /* TravelWishListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelWishListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ED836D225BF9A7008F2399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		31ED836F225BF9A7008F2399 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		31ED8371225BF9A7008F2399 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		31ED8374225BF9A7008F2399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31ED8376225BF9A7008F2399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31ED8379225BF9A7008F2399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		31ED838B225BF9A7008F2399 /* TravelWishListAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelWishListAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ED838F225BF9A7008F2399 /* TravelWishListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelWishListAppUITests.swift; sourceTree = "<group>"; };
 		31ED8391225BF9A7008F2399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31ED839E225BFA6D008F2399 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		31ED83A2225BFEFE008F2399 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		31ED83A4225C04C9008F2399 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		31ED83A6225C2CFB008F2399 /* PlaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceList.swift; sourceTree = "<group>"; };
+		31ED83A8225C2D43008F2399 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31ED839F225BFA6D008F2399 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +92,7 @@
 				31ED8383225BF9A7008F2399 /* TravelWishListAppTests */,
 				31ED838E225BF9A7008F2399 /* TravelWishListAppUITests */,
 				31ED836B225BF9A7008F2399 /* Products */,
+				31ED839D225BFA6D008F2399 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +109,16 @@
 		31ED836C225BF9A7008F2399 /* TravelWishListApp */ = {
 			isa = PBXGroup;
 			children = (
+				31ED83A2225BFEFE008F2399 /* MapViewController.swift */,
 				31ED836D225BF9A7008F2399 /* AppDelegate.swift */,
-				31ED836F225BF9A7008F2399 /* FirstViewController.swift */,
-				31ED8371225BF9A7008F2399 /* SecondViewController.swift */,
 				31ED8373225BF9A7008F2399 /* Main.storyboard */,
+				31ED83A4225C04C9008F2399 /* TableViewController.swift */,
 				31ED8376225BF9A7008F2399 /* Assets.xcassets */,
 				31ED8378225BF9A7008F2399 /* LaunchScreen.storyboard */,
 				31ED837B225BF9A7008F2399 /* Info.plist */,
+				31ED83A6225C2CFB008F2399 /* PlaceList.swift */,
+				31ED83A8225C2D43008F2399 /* Place.swift */,
+				31E130DA225C64B2009657D8 /* GeoCoder.swift */,
 			);
 			path = TravelWishListApp;
 			sourceTree = "<group>";
@@ -126,6 +139,14 @@
 				31ED8391225BF9A7008F2399 /* Info.plist */,
 			);
 			path = TravelWishListAppUITests;
+			sourceTree = "<group>";
+		};
+		31ED839D225BFA6D008F2399 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31ED839E225BFA6D008F2399 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31ED8372225BF9A7008F2399 /* SecondViewController.swift in Sources */,
 				31ED836E225BF9A7008F2399 /* AppDelegate.swift in Sources */,
-				31ED8370225BF9A7008F2399 /* FirstViewController.swift in Sources */,
+				31ED83A5225C04C9008F2399 /* TableViewController.swift in Sources */,
+				31ED83A3225BFEFE008F2399 /* MapViewController.swift in Sources */,
+				31ED83A7225C2CFB008F2399 /* PlaceList.swift in Sources */,
+				31ED83A9225C2D43008F2399 /* Place.swift in Sources */,
+				31E130DB225C64B2009657D8 /* GeoCoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
