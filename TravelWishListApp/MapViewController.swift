@@ -12,7 +12,10 @@ import MapKit
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
-    @IBOutlet weak var mapView: MKMapView!
+    //@IBOutlet string var mapView: MKMapView!
+    @IBOutlet var mapView: MKMapView!
+    @IBAction func mapButton(_ sender: Any) {
+    }
     
     let locationManager = CLLocationManager()
     let geoCoder = CLGeocoder()
@@ -31,11 +34,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-    override func loadView() {
-        mapView = MKMapView()
-        view = mapView
-        
-    }
+//    override func loadView() {
+//        mapView = MKMapView()
+//        view = mapView
+//
+//    }
     @IBAction func addLocation(_ sender: Any) {
         
         
@@ -44,7 +47,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
         if status == .authorizedWhenInUse{
             mapView.showsUserLocation = true
-            moveToCurrentLocation()
+           // moveToCurrentLocation()
         } else {
             let alert = UIAlertController(title: "Can't Display Location", message: "Please grant permission in settings", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK",

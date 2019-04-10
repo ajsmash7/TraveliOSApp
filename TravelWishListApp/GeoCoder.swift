@@ -13,8 +13,8 @@ import MapKit
 class GeoCode: NSObject {
     
 
-
-    if let location = CLLocation(latitude: l){
+/*
+    if let location = CLLocation(latitude: CLLo){
         geoCoder.reverseGeocodeLocation(location, preferredLocale: nil, completionHandler: { (placeMarks: [CLPlacemark]?, error:Error?) in
         
             if error == nil {
@@ -28,5 +28,5 @@ class GeoCode: NSObject {
                 let currentCoords = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             }
         })
-    }
+    }*/
 }
