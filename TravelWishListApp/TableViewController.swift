@@ -25,7 +25,9 @@ class TableViewController: UITableViewController {
     
     // return the number of rows currently in the table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return placeModel.count()
+        // TODO initialize placeModel
+        return 0
+        //return placeModel.count()
     }
     
     // override the cell function to display the place name and city, state

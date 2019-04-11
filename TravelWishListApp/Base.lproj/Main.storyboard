@@ -1,32 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bfK-c3-aeM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MapViewController-->
-        <scene sceneID="hNz-n2-bh7">
+        <!--Item-->
+        <scene sceneID="Lby-Wv-AwX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <viewController title="MapViewController" id="9pv-A4-QxB" customClass="MapViewController" customModule="TravelWishListApp" sceneMemberID="viewController">
-                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LVX-M9-uXe" propertyAccessControl="none">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <accessibility key="accessibilityConfiguration">
-                            <accessibilityTraits key="traits" button="YES" header="YES"/>
-                        </accessibility>
-                        <state key="normal" title="Button"/>
-                    </button>
-                    <tabBarItem key="tabBarItem" title="Map" image="first" id="acW-dT-cKf"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                <viewController id="h54-9c-hAn" customClass="MapViewController" customModule="TravelWishListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bU1-3U-jw2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HRX-0y-mUr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdX-Ry-MR9">
+                                <rect key="frame" x="164" y="456" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="mapButton:" destination="h54-9c-hAn" eventType="touchUpInside" id="egQ-eH-jPT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HRX-0y-mUr" firstAttribute="top" secondItem="MIu-No-Ppk" secondAttribute="top" id="BBK-4d-eCW"/>
+                            <constraint firstItem="MIu-No-Ppk" firstAttribute="bottom" secondItem="HRX-0y-mUr" secondAttribute="bottom" id="IVg-ru-t3c"/>
+                            <constraint firstItem="MIu-No-Ppk" firstAttribute="trailing" secondItem="HRX-0y-mUr" secondAttribute="trailing" id="jib-WW-leb"/>
+                            <constraint firstItem="HRX-0y-mUr" firstAttribute="leading" secondItem="MIu-No-Ppk" secondAttribute="leading" id="tpd-Xy-h6g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MIu-No-Ppk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="4PZ-x1-X7D"/>
+                    <connections>
+                        <outlet property="mapView" destination="HRX-0y-mUr" id="zMO-VP-PDC"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REG-ES-CW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088.8" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="1765" y="-506"/>
         </scene>
         <!--Item-->
         <scene sceneID="TOR-tX-Piy">
@@ -70,7 +90,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="hET-Hv-dUn" kind="relationship" relationship="viewControllers" id="bTL-eG-HaC"/>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="LZ9-BM-vR1"/>
+                        <segue destination="h54-9c-hAn" kind="relationship" relationship="viewControllers" id="chk-JQ-iYi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cc-UV-OY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,7 +98,4 @@
             <point key="canvasLocation" x="-66" y="-100"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="first" width="30" height="30"/>
-    </resources>
 </document>
