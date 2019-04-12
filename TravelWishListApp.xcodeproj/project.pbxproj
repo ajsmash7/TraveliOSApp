@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31394D58225F0454007C2C6C /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31394D57225F0454007C2C6C /* PlaceCell.swift */; };
+		31394D5A225F3BDF007C2C6C /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31394D59225F3BDF007C2C6C /* Annotation.swift */; };
 		31E130DB225C64B2009657D8 /* GeoCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E130DA225C64B2009657D8 /* GeoCoder.swift */; };
 		31ED836E225BF9A7008F2399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED836D225BF9A7008F2399 /* AppDelegate.swift */; };
 		31ED8375225BF9A7008F2399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ED8373225BF9A7008F2399 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31394D57225F0454007C2C6C /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		31394D59225F3BDF007C2C6C /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		31E130DA225C64B2009657D8 /* GeoCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCoder.swift; sourceTree = "<group>"; };
 		31ED836A225BF9A7008F2399 /* TravelWishListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelWishListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ED836D225BF9A7008F2399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				31ED83A6225C2CFB008F2399 /* PlaceList.swift */,
 				31ED83A8225C2D43008F2399 /* Place.swift */,
 				31E130DA225C64B2009657D8 /* GeoCoder.swift */,
+				31394D57225F0454007C2C6C /* PlaceCell.swift */,
+				31394D59225F3BDF007C2C6C /* Annotation.swift */,
 			);
 			path = TravelWishListApp;
 			sourceTree = "<group>";
@@ -285,9 +291,11 @@
 			files = (
 				31ED836E225BF9A7008F2399 /* AppDelegate.swift in Sources */,
 				31ED83A5225C04C9008F2399 /* TableViewController.swift in Sources */,
+				31394D58225F0454007C2C6C /* PlaceCell.swift in Sources */,
 				31ED83A3225BFEFE008F2399 /* MapViewController.swift in Sources */,
 				31ED83A7225C2CFB008F2399 /* PlaceList.swift in Sources */,
 				31ED83A9225C2D43008F2399 /* Place.swift in Sources */,
+				31394D5A225F3BDF007C2C6C /* Annotation.swift in Sources */,
 				31E130DB225C64B2009657D8 /* GeoCoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

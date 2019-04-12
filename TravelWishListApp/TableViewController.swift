@@ -15,9 +15,7 @@ class TableViewController: UITableViewController {
     var placeModel: PlaceList!
     
     // add a new place to the list. If it's new, it hasn't been visited yet.
-    func addNewPlace(_ sender: Any, name: String, hasVisited: Bool, coordinate: CLLocationCoordinate2D, locString: String) {
-        
-        let place = Place(name: name, hasVisited: false, coordinate: coordinate, locString: locString)
+    func addNewPlace(_ sender: Any, place: Place) {
                 let index = self.placeModel.add(place)
                 let indexPath = IndexPath(row: index, section: 0)
                 self.tableView.insertRows(at:[indexPath], with: .automatic)
@@ -25,23 +23,41 @@ class TableViewController: UITableViewController {
     
     // return the number of rows currently in the table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO initialize placeModel
-        return 0
-        //return placeModel.count()
+        
+        return placeModel.places.count
+        
     }
     
-    // override the cell function to display the place name and city, state
+    // override the cell function to use the cell custom class
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // declare a reusable cell style as a PlaceCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath) as! PlaceCell
+        // store the place information of the row selected into a variable
         let place = placeModel.getPlace(at: indexPath.row)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        cell.textLabel?.text = place?.name
-        cell.detailTextLabel?.text = place?.locString
+        
+        // get the string value of hasVisited to display in the cell
+        let visitValue = placeModel.getVisitedValue(at: indexPath.row)
+            
+        //set cell values
+        cell.nameLabel.text = place?.name
+        cell.locationLabel.text = place?.locString
+        cell.visitedLabel.text = visitValue
+        cell.backgroundColor = place?.TintColor
+        
         return cell
         
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            let placeMapView = segue.destination as! MapViewController
+            let rowsSelected = tableView.indexPathsForSelectedRows
+            let place = placeModel.getPlace(at: (rowsSelected?[0].row)!)
+            placeMapView.place = place
+            
+            
+        }
     }
     
     

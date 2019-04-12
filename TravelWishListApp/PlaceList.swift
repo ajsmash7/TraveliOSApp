@@ -13,7 +13,7 @@ class PlaceList {
     
     var places = [Place]()
     
-    func add(_ place:Place) -> Int {
+    @discardableResult func add(_ place:Place) -> Int {
         places.append(place)
         return places.endIndex-1
     }
@@ -29,5 +29,23 @@ class PlaceList {
         return places.count
     }
     
+    
+    func getVisitedValue(at index: Int) -> String?{
+        if places.indices.contains(index){
+            switch places[index].hasVisited {
+            case true?:
+                return "Visited"
+            case false?:
+                return "Not Visited"
+            default:
+                return "Error"
+            }
+        
+        }else {
+            return nil
+        }
+    
+        
+    }
     
 }

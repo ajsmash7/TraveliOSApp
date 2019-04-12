@@ -12,15 +12,14 @@ import MapKit
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
-    //@IBOutlet string var mapView: MKMapView!
     @IBOutlet var mapView: MKMapView!
-    @IBAction func mapButton(_ sender: Any) {
-    }
+    
     
     let locationManager = CLLocationManager()
-    let geoCoder = CLGeocoder()
     let regionRadius: CLLocationDistance = 1000
-    var places = [PlaceList].self
+    var places: PlaceList!
+    var place: Place!
+    let coder = GeoCoder()
     
     
     override func viewDidLoad() {
@@ -31,15 +30,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.requestWhenInUseAuthorization()
         mapView.delegate = self
         mapView.showsPointsOfInterest = true
+        centerMapToLocation(location: CLLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude))
         
     }
     
-//    override func loadView() {
-//        mapView = MKMapView()
-//        view = mapView
-//
-//    }
-    @IBAction func addLocation(_ sender: Any) {
+    @IBAction func mapButton(_ sender: Any) {
+        if let location = locationManager.location {
+            place = coder.getNewPlace(location: location)
+            _ = places.add(place)
+        }
         
         
     }

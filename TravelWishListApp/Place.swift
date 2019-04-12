@@ -23,14 +23,16 @@ class Place: NSObject, CLLocationManagerDelegate {
         self.coordinate = coordinate
         self.locString = locString
         
+        super.init()
+        
     }
         
-    var markerTintColor: UIColor {
+    var TintColor: UIColor {
         switch hasVisited {
         case true?:
-            return .lightGray
+            return .cyan
         case false?:
-            return .red
+            return .yellow
         case .none:
             return .clear
         }
