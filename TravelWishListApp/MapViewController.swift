@@ -30,7 +30,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.requestWhenInUseAuthorization()
         mapView.delegate = self
         mapView.showsPointsOfInterest = true
-        centerMapToLocation(location: CLLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude))
         
     }
     
