@@ -21,10 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let placeModel = PlaceList()
         
         // set the placeModel in the table view controller
-        let tableController = window!.rootViewController as! TableViewController
-        tableController.placeModel = placeModel
+        let barController = window!.rootViewController as! UITabBarController
+        if let allControllers = barController.viewControllers {
+            let tableController = allControllers[0] as! TableViewController
+                tableController.placeModel = placeModel
+        }
         return true
     }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -48,6 +52,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-
